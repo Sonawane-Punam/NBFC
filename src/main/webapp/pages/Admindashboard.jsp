@@ -122,10 +122,18 @@
 						<div class="right-chart">
 							<div class="h3">
 								<h3>Pending Collection</h3>
-								<div class="outer-btn" onclick="sendAlerts(this)">
-									<p>Send Alerts <i class="fa-solid fa-bell"></i></p>
-									<div class="loader"></div>
-								</div>
+								<c:if test="${pending.size() != 0}">
+									<div class="outer-btn" onclick="sendAlerts(this)">
+										<p>Send Alerts <i class="fa-solid fa-bell"></i></p>
+										<div class="loader"></div>
+									</div>								
+								</c:if>
+								<c:if test="${pending.size() == 0}">
+									<div class="outer-btn deactivate">
+										<p>Send Alerts <i class="fa-solid fa-bell"></i></p>
+										<div class="loader"></div>
+									</div>								
+								</c:if>
 							</div>
 							<div class="heading">
 								<p>Account No.</p>

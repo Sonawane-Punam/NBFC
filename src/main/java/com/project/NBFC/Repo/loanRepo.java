@@ -24,7 +24,7 @@ public interface loanRepo extends JpaRepository<Loan,Integer>
 	@Query(value = "select * from loan where applied_user_account_no = ?1 and (status='Disbursed' or status='Active') order by next_emi_date",nativeQuery = true)
 	public List<Loan> findByAppliedUserAccountNo(int account_no);
 
-	@Query(value = "select * from loan where status='Active' and next_emi_date < :due order by next_emi_date", nativeQuery = true)
+	@Query(value = "select * from loan where (status='Active' or status='Disbursed') and next_emi_date < :due order by next_emi_date", nativeQuery = true)
 	public List<Loan> getUpcomingEmi(@Param("due") Date d);
 }
 

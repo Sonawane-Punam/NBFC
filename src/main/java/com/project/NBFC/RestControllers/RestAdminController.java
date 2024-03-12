@@ -225,7 +225,7 @@ public class RestAdminController
 				msg += "Your EMI of Rs." + emi + ".00💵 will be due on " + loan.getFormatedDate();
 			}
 			
-			msg += ". Please🙏 pay it by logging into NBFC Plus👨🏻‍💻 portal.";
+			msg += ". Please pay it by logging into NBFC Plus portal.";
 			
 			// Normal Msg
 	        Message.creator(new PhoneNumber("+91" + senderContact), new PhoneNumber("+13236885893"), msg).create();

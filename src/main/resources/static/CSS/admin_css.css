@@ -353,6 +353,7 @@ header #toast.activate{
 .content #charts-analytics .right-chart .h3 .outer-btn.deactivate{
     color: var(--fcolor-dark2);
     border: 2px solid var(--fcolor-dark2);
+    pointer-events:none;
 }
 
 .content #charts-analytics .right-chart .h3 .outer-btn p{
