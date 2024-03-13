@@ -457,7 +457,7 @@ public class UserController
 			
 		String userDirectory = new File("").getAbsolutePath();
 		
-		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
+		String relPath = "\\documents";
 		
 		File file = new File(relPath + "\\" + Integer.toString(accountNo));
 		
