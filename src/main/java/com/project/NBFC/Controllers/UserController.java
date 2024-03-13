@@ -457,7 +457,14 @@ public class UserController
 			
 		String userDirectory = new File("").getAbsolutePath();
 		
-		String relPath = "documents";
+		String relPath = "/documents";
+		
+		File temp = new File(relPath);
+		
+		if(!temp.exists()) {
+			temp.mkdir();
+			System.out.println("dfgvdfgdgdgdfgdfdfgfdgdfgfdgf");
+		}
 		
 		File file = new File(relPath + "/" + Integer.toString(accountNo));
 		
