@@ -778,15 +778,6 @@
 							<p></p>
 						</div>
 						<div class="repayments">
-							<div class="each-payment">
-								<p>#1</p>
-								<p>12 Feb 2023</p>
-								<p>
-									<span class="repayment-btn"
-										onclick="openRepayment(211012100, 'loanid', 'Installment', 'date')">Pay
-										&#8377 1545.00</span>
-								</p>
-							</div>
 						</div>
 					</div>
 					<div id="repayment-form-container" onclick="hide_repayment_form()">
