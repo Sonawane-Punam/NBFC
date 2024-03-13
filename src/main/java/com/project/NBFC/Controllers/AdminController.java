@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -55,6 +56,9 @@ public class AdminController
 	
 	@Autowired
 	GuarantorService gs;
+	
+	@Autowired
+	ServletContext context; 
 	
 	
 	@RequestMapping("/adminLogin")
@@ -296,7 +300,9 @@ public class AdminController
 		String Pan_name = "UserPan.jpg";
 		
 //		String relPath = "C:\\\\Users\\\\punam sonawane\\\\Final_Project_workspace\\\\NBFC\\\\src\\\\main\\\\resources\\\\static\\\\documents";
-		String relPath = "V:\\All_Programs\\PunamFinalProject\\Final\\NBFC\\NBFC\\src\\main\\resources\\static\\documents";
+		String userDirectory = new File("").getAbsolutePath();
+		
+		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
 		
 		
 		File file = new File(relPath + "\\" + Integer.toString(accountNo));

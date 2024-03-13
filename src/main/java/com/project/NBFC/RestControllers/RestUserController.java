@@ -64,7 +64,7 @@ public class RestUserController
 			r.setMsg(errors.getAllErrors()
 					.stream().map(x -> x.getDefaultMessage())
 					.collect(Collectors.joining(",")));
-			return ResponseEntity.badRequest().body(r);	
+			return ResponseEntity.badRequest().body(r);
 		}
 		
 		List<Users> users = us.getByFullName(search.getSearchString(),search.getSearchString());

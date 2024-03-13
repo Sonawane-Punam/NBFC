@@ -1587,6 +1587,7 @@ div.loan-type-div select::before {
 
 .admin-view-loan .loan-info-container .show-image .outer-div{
     height: 100%;
+    max-width: 90%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;

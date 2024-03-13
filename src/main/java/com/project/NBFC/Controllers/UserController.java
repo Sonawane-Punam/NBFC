@@ -271,7 +271,11 @@ public class UserController
 		String Pan_name = "UserPan.jpg";
 		
 		
-		File file = new File("C:\\Users\\punam sonawane\\Final_Project_workspace\\NBFC\\src\\main\\resources\\static\\documents" + "\\" + Integer.toString(accountNo));
+		String userDirectory = new File("").getAbsolutePath();
+		
+		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
+		
+		File file = new File(relPath + "\\" + Integer.toString(accountNo));
 		if(!file.exists())
 		{
 			file.mkdir();
@@ -325,7 +329,7 @@ public class UserController
 		String g1_pan = "g_pan.jpg";
 		
 		
-		File g1_file = new File("C:\\Users\\punam sonawane\\Final_Project_workspace\\NBFC\\src\\main\\resources\\static\\documents" + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g1_id));
+		File g1_file = new File(relPath + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g1_id));
 		if(!g1_file.exists())
 		{
 			g1_file.mkdir();
@@ -356,7 +360,7 @@ public class UserController
 		String g2_pan = "g_pan.jpg";
 		
 		
-		File g2_file = new File("C:\\Users\\punam sonawane\\Final_Project_workspace\\NBFC\\src\\main\\resources\\static\\documents" + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g2_id));
+		File g2_file = new File(relPath + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g2_id));
 		if(!g2_file.exists())
 		{
 			g2_file.mkdir();
@@ -451,7 +455,11 @@ public class UserController
 		String Adhaar_name = "UserAdhaar.jpg";
 		String Pan_name = "UserPan.jpg";
 			
-		File file = new File("C:\\Users\\punam sonawane\\Final_Project_workspace\\NBFC\\src\\main\\resources\\static\\documents" + "\\" + Integer.toString(accountNo));
+		String userDirectory = new File("").getAbsolutePath();
+		
+		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
+		
+		File file = new File(relPath + "\\" + Integer.toString(accountNo));
 		if(!file.exists())
 		{
 			file.mkdir();
