@@ -461,9 +461,7 @@ public class UserController
 		
 		File file = new File(relPath + "\\" + Integer.toString(accountNo));
 		
-		String classpath = System.getProperty("java.class.path");
-		
-		System.out.println(classpath);
+		System.out.println(file.getAbsolutePath()); 
 		
 		if(!file.exists())
 		{
