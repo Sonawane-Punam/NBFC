@@ -460,6 +460,9 @@ public class UserController
 		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
 		
 		File file = new File(relPath + "\\" + Integer.toString(accountNo));
+		
+		System.out.println(relPath);
+		
 		if(!file.exists())
 		{
 			file.mkdir();
