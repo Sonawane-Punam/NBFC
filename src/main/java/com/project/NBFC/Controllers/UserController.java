@@ -457,7 +457,7 @@ public class UserController
 			
 		String userDirectory = new File("").getAbsolutePath();
 		
-		String relPath = "/documents";
+		String relPath = "documents";
 		
 		File temp = new File(relPath);
 		
