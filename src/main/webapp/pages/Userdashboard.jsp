@@ -371,7 +371,7 @@
 							<c:forEach items="${loan}" var="e">
 								<div class="user-loan-div">
 									<div class="visible-part">
-										<p class="loan-id">#${e.getLid()}</p>
+										<p class="loan-id">${e.getLid()}</p>
 										<p class="loan-type">${e.getLoanType()}</p>
 										<p class="loan-status">
 											<span class="status-dot" id="spanFor${e.getLid()}"><script
@@ -402,7 +402,7 @@
 										</div>
 										<div class="loan-component">
 											<p>Tenure in Years</p>
-											<p>${e.getLoanTenure()} yrs</p>
+											<p>${e.getLoanTenure()}yr</p>
 										</div>
 										<div class="loan-component">
 											<p>Guarantor 2</p>
@@ -778,6 +778,15 @@
 							<p></p>
 						</div>
 						<div class="repayments">
+							<div class="each-payment">
+								<p>#1</p>
+								<p>12 Feb 2023</p>
+								<p>
+									<span class="repayment-btn"
+										onclick="openRepayment(211012100, 'loanid', 'Installment', 'date')">Pay
+										&#8377 1545.00</span>
+								</p>
+							</div>
 						</div>
 					</div>
 					<div id="repayment-form-container" onclick="hide_repayment_form()">
