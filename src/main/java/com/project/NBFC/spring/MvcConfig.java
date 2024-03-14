@@ -14,7 +14,7 @@ public class MvcConfig implements WebMvcConfigurer  {
   public void addResourceHandlers(ResourceHandlerRegistry registry) {
     String myExternalFilePath = "file:" + System.getProperty("user.dir") +"/documents/";
     
-    System.out.println(myExternalFilePath);
+//    System.out.println(myExternalFilePath);
 
      registry.addResourceHandler("/documents/**").addResourceLocations(myExternalFilePath);
 

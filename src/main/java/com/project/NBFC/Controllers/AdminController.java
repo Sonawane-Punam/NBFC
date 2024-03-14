@@ -300,12 +300,17 @@ public class AdminController
 		String Pan_name = "UserPan.jpg";
 		
 //		String relPath = "C:\\\\Users\\\\punam sonawane\\\\Final_Project_workspace\\\\NBFC\\\\src\\\\main\\\\resources\\\\static\\\\documents";
-		String userDirectory = new File("").getAbsolutePath();
+		String relPath = System.getProperty("user.dir") + File.separator + "documents";
 		
-		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
+		File temp = new File(relPath);
 		
+		if(!temp.exists())
+		{
+			temp.mkdir();
+		}
 		
-		File file = new File(relPath + "\\" + Integer.toString(accountNo));
+		File file = new File(relPath + File.separator + Integer.toString(accountNo));
+		
 		if(!file.exists())
 		{
 			file.mkdir();
@@ -359,7 +364,7 @@ public class AdminController
 		String g1_pan = "g_pan.jpg";
 		
 		
-		File g1_file = new File(relPath + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g1_id));
+		File g1_file = new File(relPath + File.separator + Integer.toString(accountNo) + File.separator + "G" + Integer.toString(g1_id));
 		if(!g1_file.exists())
 		{
 			g1_file.mkdir();
@@ -390,7 +395,7 @@ public class AdminController
 		String g2_pan = "g_pan.jpg";
 		
 		
-		File g2_file = new File(relPath + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g2_id));
+		File g2_file = new File(relPath + File.separator + Integer.toString(accountNo) + File.separator + "G" + Integer.toString(g2_id));
 		if(!g2_file.exists())
 		{
 			g2_file.mkdir();

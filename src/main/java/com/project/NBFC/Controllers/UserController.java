@@ -271,11 +271,17 @@ public class UserController
 		String Pan_name = "UserPan.jpg";
 		
 		
-		String userDirectory = new File("").getAbsolutePath();
+		String relPath = System.getProperty("user.dir") + File.separator + "documents";
 		
-		String relPath = userDirectory + "\\src\\main\\resources\\static\\documents";
+		File temp = new File(relPath);
 		
-		File file = new File(relPath + "\\" + Integer.toString(accountNo));
+		if(!temp.exists())
+		{
+			temp.mkdir();
+		}
+		
+		File file = new File(relPath + File.separator + Integer.toString(accountNo));
+		
 		if(!file.exists())
 		{
 			file.mkdir();
@@ -329,7 +335,7 @@ public class UserController
 		String g1_pan = "g_pan.jpg";
 		
 		
-		File g1_file = new File(relPath + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g1_id));
+		File g1_file = new File(relPath + File.separator + Integer.toString(accountNo) + File.separator + "G" + Integer.toString(g1_id));
 		if(!g1_file.exists())
 		{
 			g1_file.mkdir();
@@ -360,7 +366,7 @@ public class UserController
 		String g2_pan = "g_pan.jpg";
 		
 		
-		File g2_file = new File(relPath + "\\" + Integer.toString(accountNo) + "\\G" + Integer.toString(g2_id));
+		File g2_file = new File(relPath + File.separator + Integer.toString(accountNo) + File.separator + "G" + Integer.toString(g2_id));
 		if(!g2_file.exists())
 		{
 			g2_file.mkdir();
@@ -455,13 +461,7 @@ public class UserController
 		String Adhaar_name = "UserAdhaar.jpg";
 		String Pan_name = "UserPan.jpg";
 			
-		String userDirectory = new File("").getAbsolutePath();
-		
-		System.out.println(userDirectory);
-		
-		System.out.println(System.getProperty("user.dir"));
-		
-		String relPath = userDirectory + File.separator + "documents";
+		String relPath = System.getProperty("user.dir") + File.separator + "documents";
 		
 		File temp = new File(relPath);
 		
@@ -470,10 +470,7 @@ public class UserController
 			temp.mkdir();
 		}
 		
-		
 		File file = new File(relPath + File.separator + Integer.toString(accountNo));
-		
-		System.out.println(file.getAbsolutePath()); 
 		
 		if(!file.exists())
 		{

@@ -1072,9 +1072,9 @@
 									<i class="fa-solid fa-venus-mars"></i>
 									<p class="gender-label">Gender</p>
 									<input type="radio" name="gender" id="male" class="male"
-										value="male"> <label for="male"><i
+										value="Male"> <label for="male"><i
 										class="fa-solid fa-mars"></i> Male</label> <input type="radio"
-										name="gender" id="female" class="female" value="female">
+										name="gender" id="female" class="female" value="Female">
 									<label for="female"><i class="fa-solid fa-venus"></i>
 										Female</label>
 								</div>
