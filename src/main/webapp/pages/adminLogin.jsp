@@ -16,9 +16,29 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>NBFC Software</title>
     <link rel="stylesheet" href="/CSS/admin-login.css">
+    <link rel="stylesheet" href="/CSS/loader.css">
 </head>
 
 <body>
+	<div id="entire-page-loader">
+		<img src="/images/loaderImage.png">
+		<div class="inside">
+			<span style="--i:0;"></span>
+			<span style="--i:1;"></span>
+			<span style="--i:2;"></span>
+			<span style="--i:3;"></span>
+			<span style="--i:4;"></span>
+			<span style="--i:5;"></span>
+			<span style="--i:6;"></span>
+		</div>
+	</div>
+	<script>
+		$(window).on('load', function(){
+		   $('#entire-page-loader').hide();
+		});
+		
+	</script>
+
     <header>
         <h1>NBFC <img src="/images/graph-icon.svg" alt="" srcset=""> Plus </h1>
     </header>

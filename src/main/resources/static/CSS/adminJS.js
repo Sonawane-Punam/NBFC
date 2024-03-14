@@ -241,9 +241,9 @@ function calculateEMI() {
 
 	total_interest = total_amount - principal;
 
-	$("#monthly-emi-box").html("&#8377 " + monthly_emi);
-	$("#total-interest-box").html("&#8377 " + total_interest)
-	$("#total-amount-box").html("&#8377 " + total_amount);
+	$("#monthly-emi-box").html("&#8377 " + monthly_emi + ".0");
+	$("#total-interest-box").html("&#8377 " + total_interest + ".0")
+	$("#total-amount-box").html("&#8377 " + total_amount + ".0");
 
 	pie_chart.data.datasets[0].data = [total_interest, principal];
 
@@ -339,7 +339,7 @@ function getUsers(defaultArg = "") {
                                                 <p>${user["account_no"]}</p>
                                                 <p>${user["fullname"]}</p>
                                                 <p>${user["email"]}</p>
-                                                <p>&#8377 ${user["balance"]}</p>
+                                                <p>&#8377 ${user["balance"]}.0</p>
                                             </div>`;
 
 				results_div.append(user_div);
@@ -854,7 +854,7 @@ function getDocsDiv(guarantor_no) {
                                                                 class="photo-label upload-btn">Upload</label>
                                                             <input type="file" name="guarantor-${guarantor_no}-adhaar-photo" id="guarantor-${guarantor_no}-adhaar-photo"
                                                                 onchange="fileChosen(this, 'adhaar', 'guarantor-${guarantor_no}-docs')"
-                                                                accept=".jpg, .png, .jpeg, .pdf" hidden>
+                                                                accept=".jpg, .png, .jpeg" hidden>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -868,7 +868,7 @@ function getDocsDiv(guarantor_no) {
                                                             <label for="guarantor-${guarantor_no}-pan-photo" class="photo-label upload-btn">Upload</label>
                                                             <input type="file" name="guarantor-${guarantor_no}-pan-photo" id="guarantor-${guarantor_no}-pan-photo"
                                                                 onchange="fileChosen(this, 'pan', 'guarantor-${guarantor_no}-docs')"
-                                                                accept=".jpg, .png, .jpeg, .pdf" hidden>
+                                                                accept=".jpg, .png, .jpeg" hidden>
                                                         </div>
                                                     </div>
                                                 </div>

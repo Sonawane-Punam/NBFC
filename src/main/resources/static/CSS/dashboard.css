@@ -1642,6 +1642,9 @@ div.loan-type-div select::before {
     color: var(--fcolor-dark);
     width: 30%;
 }
+#profile-container #profile-content #general-profile-content .profile-field .profile-label i{
+	margin-right: 8px;
+}
 #profile-container #profile-content #general-profile-content .profile-field .profile-text{
     font-weight: 500;
     width: 70%;

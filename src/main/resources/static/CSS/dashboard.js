@@ -412,11 +412,11 @@ function updateActiveTab(tab){
 
             total_interest = total_amount - principal;
 
-            $("#monthly-emi-box").html("&#8377 " + monthly_emi);
+            $("#monthly-emi-box").html("&#8377 " + monthly_emi + ".0");
             $("#monthly-emi-input").val(parseInt(monthly_emi));
-            $("#total-interest-box").html("&#8377 " + total_interest)
+            $("#total-interest-box").html("&#8377 " + total_interest + ".0")
             $("#total-interest-input").val(parseInt(total_interest));
-            $("#total-amount-box").html("&#8377 " + total_amount);
+            $("#total-amount-box").html("&#8377 " + total_amount + ".0");
             $("#total-amount-input").val(parseInt(total_amount));
 
             pie_chart.data.datasets[0].data = [total_interest, principal];
@@ -480,7 +480,7 @@ function updateActiveTab(tab){
                                                     class="photo-label upload-btn">Upload</label>
                                                 <input type="file" name="guarantor-${guarantor_no}-adhaar-photo" id="guarantor-${guarantor_no}-adhaar-photo"
                                                     onchange="fileChosen(this, 'adhaar', 'guarantor-${guarantor_no}-docs')"
-                                                    accept=".jpg, .png, .jpeg, .pdf" hidden>
+                                                    accept=".jpg, .png, .jpeg" hidden>
                                             </div>
                                         </div>
                                     </div>
@@ -495,7 +495,7 @@ function updateActiveTab(tab){
                                                 <label for="guarantor-${guarantor_no}-pan-photo" class="photo-label upload-btn">Upload</label>
                                                 <input type="file" name="guarantor-${guarantor_no}-pan-photo" id="guarantor-${guarantor_no}-pan-photo"
                                                     onchange="fileChosen(this, 'pan', 'guarantor-${guarantor_no}-docs')"
-                                                    accept=".jpg, .png, .jpeg, .pdf" hidden>
+                                                    accept=".jpg, .png, .jpeg" hidden>
                                             </div>
                                         </div>
                                     </div>

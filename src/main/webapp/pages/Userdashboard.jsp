@@ -21,10 +21,27 @@
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/CSS/dashboard.css">
 <link rel="stylesheet" href="/CSS/form.css">
+<link rel="stylesheet" href="/CSS/loader.css">
 <title>NBFCPlus Dashboard</title>
 </head>
 
 <body>
+	<div id="entire-page-loader">
+		<img src="/images/loaderImage.png">
+		<div class="inside">
+			<span style="--i: 0;"></span> <span style="--i: 1;"></span> <span
+				style="--i: 2;"></span> <span style="--i: 3;"></span> <span
+				style="--i: 4;"></span> <span style="--i: 5;"></span> <span
+				style="--i: 6;"></span>
+		</div>
+	</div>
+	<script>
+			$(window).on('load', function(){
+			   $('#entire-page-loader').hide();
+			});	
+	</script>
+
+
 	<header id="dashboard-header">
 		<h1>
 			NBFC <img src="/images/graph-icon.svg" alt="" srcset=""> Plus
@@ -164,14 +181,16 @@
 							<input type="number" name="sender" id="sender"
 								value="${user.getAccount_no()}" hidden>
 							<div class="input">
-								<label for="receiversearch">Receiver Account Number or Name</label> 
-								<i class="fa-regular fa-user" for="receiversearch"></i> 
-								<input type="number" name="receiver" id="receiver" class="receiver" autocomplete="nope" hidden>
-								<input type="text" name="receiversearch" id="receiversearch"  class="searchForReceiverInp" autocomplete="nope" onkeyup="searchForReceiver(this, ${user.getAccount_no()})" onfocus="searchForReceiver(this, ${user.getAccount_no()})">			
+								<label for="receiversearch">Receiver Account Number or
+									Name</label> <i class="fa-regular fa-user" for="receiversearch"></i> <input
+									type="number" name="receiver" id="receiver" class="receiver"
+									autocomplete="nope" hidden> <input type="text"
+									name="receiversearch" id="receiversearch"
+									class="searchForReceiverInp" autocomplete="nope"
+									onkeyup="searchForReceiver(this, ${user.getAccount_no()})"
+									onfocus="searchForReceiver(this, ${user.getAccount_no()})">
 							</div>
-							<div class="receivers-list-container">
-								
-							</div>
+							<div class="receivers-list-container"></div>
 							<div class="input">
 								<label for="amount">Amount</label> <i
 									class="fa-solid fa-indian-rupee-sign" for="amount"></i> <input
@@ -268,7 +287,7 @@
 											class="photo-label upload-btn">Upload</label> <input
 											type="file" name="profile_photo" id="profile-profile-photo"
 											onchange="fileChosen(this, 'profile', 'documents-content')"
-											accept=".jpg, .png, .jpeg, .pdf" hidden>
+											accept=".jpg, .png, .jpeg" hidden>
 									</div>
 									<div class="photo-upload">
 										<label class="photo-label">Adhaar Card</label>
@@ -290,7 +309,7 @@
 											class="photo-label upload-btn">Upload</label> <input
 											type="file" name="adhaar_photo" id="profile-adhaar-photo"
 											onchange="fileChosen(this, 'adhaar', 'documents-content')"
-											accept=".jpg, .png, .jpeg, .pdf" hidden>
+											accept=".jpg, .png, .jpeg" hidden>
 									</div>
 									<div class="photo-upload">
 										<label class="photo-label">Pan Card</label>
@@ -311,7 +330,7 @@
 										<label for="profile-pan-photo" class="photo-label upload-btn">Upload</label>
 										<input type="file" name="pan_photo" id="profile-pan-photo"
 											onchange="fileChosen(this, 'pan', 'documents-content')"
-											accept=".jpg, .png, .jpeg, .pdf" hidden>
+											accept=".jpg, .png, .jpeg" hidden>
 									</div>
 								</form>
 							</div>
@@ -603,7 +622,7 @@
 										<label for="profile-photo" class="photo-label upload-btn">Upload</label>
 										<input type="file" name="profile-photo" id="profile-photo"
 											onchange="fileChosen(this, 'profile', 'loan-page-3')"
-											accept=".jpg, .png, .jpeg, .pdf" hidden>
+											accept=".jpg, .png, .jpeg" hidden>
 									</div>
 									<div class="photo-upload">
 										<label class="photo-label">Adhaar Card</label>
@@ -624,7 +643,7 @@
 										<label for="adhaar-photo" class="photo-label upload-btn">Upload</label>
 										<input type="file" name="adhaar-photo" id="adhaar-photo"
 											onchange="fileChosen(this, 'adhaar', 'loan-page-3')"
-											accept=".jpg, .png, .jpeg, .pdf" hidden>
+											accept=".jpg, .png, .jpeg" hidden>
 									</div>
 									<div class="photo-upload">
 										<label class="photo-label">Pan Card</label>
@@ -645,7 +664,7 @@
 										<label for="pan-photo" class="photo-label upload-btn">Upload</label>
 										<input type="file" name="pan-photo" id="pan-photo"
 											onchange="fileChosen(this, 'pan', 'loan-page-3')"
-											accept=".jpg, .png, .jpeg, .pdf" hidden>
+											accept=".jpg, .png, .jpeg" hidden>
 									</div>
 								</div>
 								<div id="loan-page-4">
@@ -667,8 +686,7 @@
 											<h3>No Result Found</h3>
 										</div>
 
-										<div class="results">
-										</div>
+										<div class="results"></div>
 
 									</div>
 									<div id="added-guarantors">
@@ -756,8 +774,7 @@
 							<p>Due Date</p>
 							<p></p>
 						</div>
-						<div class="repayments">
-						</div>
+						<div class="repayments"></div>
 					</div>
 					<div id="repayment-form-container" onclick="hide_repayment_form()">
 						<div class="sub-container">
