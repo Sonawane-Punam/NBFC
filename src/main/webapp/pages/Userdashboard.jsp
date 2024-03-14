@@ -668,27 +668,6 @@
 										</div>
 
 										<div class="results">
-											<div class="result" onclick="select_guarantor(this)">
-												<p class="g_name">Punam Sonawane</p>
-												<p class="account_number display_none">2110001001</p>
-												<button type="button">
-													<i class="fa-solid fa-plus"></i>
-												</button>
-											</div>
-											<div class="result" onclick="select_guarantor(this)">
-												<p class="g_name">Vivek Patil</p>
-												<p class="account_number display_none">2110001002</p>
-												<button type="button">
-													<i class="fa-solid fa-plus"></i>
-												</button>
-											</div>
-											<div class="result" onclick="select_guarantor(this)">
-												<p class="g_name">Gaurav Patil</p>
-												<p class="account_number display_none">2110001003</p>
-												<button type="button">
-													<i class="fa-solid fa-plus"></i>
-												</button>
-											</div>
 										</div>
 
 									</div>
@@ -778,15 +757,6 @@
 							<p></p>
 						</div>
 						<div class="repayments">
-							<div class="each-payment">
-								<p>#1</p>
-								<p>12 Feb 2023</p>
-								<p>
-									<span class="repayment-btn"
-										onclick="openRepayment(211012100, 'loanid', 'Installment', 'date')">Pay
-										&#8377 1545.00</span>
-								</p>
-							</div>
 						</div>
 					</div>
 					<div id="repayment-form-container" onclick="hide_repayment_form()">
