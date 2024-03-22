@@ -1634,6 +1634,7 @@ div.loan-type-div select::before {
 .admin-view-loan .loan-info-container .show-image .preview-img-div img{
     min-height: 90%;
     max-height: 200%;
+    max-width: 100%;
     margin-right: 5px;
     margin-bottom: 5px;
 }
