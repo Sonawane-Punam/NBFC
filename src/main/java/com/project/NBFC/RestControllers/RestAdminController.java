@@ -205,7 +205,8 @@ public class RestAdminController
 		
 		List<Loan> pendingEMIs =ls.getUpcomingEmi(2);
 		
-        Twilio.init("AC52069cc65170a04ee1f35fd048a55813", "3e51a0bae97ada89956c56216fc05936");
+        Twilio.init("AC52069cc65170a04ee1f35fd048a55813", System.getenv("twilio_auth"));
+        
         
         SuccessResponse res = new SuccessResponse();
 

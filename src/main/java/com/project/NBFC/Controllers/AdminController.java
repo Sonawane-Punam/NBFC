@@ -106,6 +106,8 @@ public class AdminController
 	@RequestMapping({"/Dashboard","/single-loans/Dashboard"})
 	public String getTransaction(HttpServletRequest request,ModelMap model)
 	{
+		
+        System.out.println("******************* " + System.getenv("twilio_auth"));
 		HttpSession s1 = request.getSession(false);
 		String x= (String) s1.getAttribute("temp");
 		if(x==null)
